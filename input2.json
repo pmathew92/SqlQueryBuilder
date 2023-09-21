@@ -1,0 +1,12 @@
+{
+  "queryType": "SELECT",
+  "fields": [
+    "id",
+    "name",
+    "department"
+  ],
+  "conditions": [],
+  "tableName": "employee",
+  "columns": [],
+  "join": []
+}

@@ -1,2 +1,10 @@
-
-{"type":"SELECT","columns":["*"],"joiners":[],"table_name":"iris","operations":[],"joinOperations":[]}
+{
+  "queryType": "SELECT",
+  "fields": [
+    "*"
+  ],
+  "conditions": [],
+  "tableName": "employee",
+  "columns": [],
+  "join": []
+}
