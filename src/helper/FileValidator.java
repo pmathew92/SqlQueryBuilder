@@ -1,8 +1,10 @@
 package helper;
 
+import java.io.File;
+
 public class FileValidator {
 
     public static boolean isValidJsonFile(String path) {
-   return  false;
+        return path.endsWith(Constants.JSON_EXTENSION);
     }
 }
