@@ -1,0 +1,44 @@
+{
+  "queryType": "SELECT",
+  "fields": [
+    "id",
+    "name",
+    "department"
+  ],
+  "conditions": [],
+  "tableName": "employee",
+  "columns": [
+    {
+      "operator": "=",
+      "fieldName": "department",
+      "fieldValue": [
+        "engineering"
+      ]
+    },
+    {
+      "operator": "BETWEEN",
+      "fieldName": "salary",
+      "fieldValue": [
+        50000,
+        100000
+      ]
+    },
+    {
+      "operator": "IN",
+      "fieldName": "rating",
+      "fieldValue": [
+        0.4,
+        0.8
+      ]
+    }
+  ],
+  "join": [
+    {
+      "joinType": "inner join",
+      "operator": "=",
+      "field1": "employee.id",
+      "field2": "Products.productId",
+      "joinTableName": "Products"
+    }
+  ]
+}

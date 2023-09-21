@@ -2,8 +2,6 @@ import data.JsonDataSourceImpl;
 import interfaces.JsonDataSource;
 import model.Query;
 
-import java.util.Scanner;
-
 public class QueryGenerator {
 
     public static void main(String[] args) {
@@ -13,7 +11,7 @@ public class QueryGenerator {
 //        System.out.println("Enter the json file path:");
 //        Scanner scanner = new Scanner(System.in);
 //        String s = scanner.nextLine();
-        Query query = dataSource.fetchJsonData("input2.json");
+        Query query = dataSource.fetchJsonData("input4.json");
         if (query == null) {
             throw new RuntimeException("Error while generating query");
         }

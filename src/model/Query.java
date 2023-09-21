@@ -25,7 +25,7 @@ public class Query {
     private List<Column> columns;
     @SerializedName("join")
     @Expose
-    private List<String> join;
+    private List<Join> join;
 
     public String getQueryType() {
         return queryType;
@@ -67,11 +67,11 @@ public class Query {
         this.columns = columns;
     }
 
-    public List<String> getJoin() {
+    public List<Join> getJoin() {
         return join;
     }
 
-    public void setJoin(List<String> join) {
+    public void setJoin(List<Join> join) {
         this.join = join;
     }
 

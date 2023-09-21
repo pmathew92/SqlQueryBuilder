@@ -1,7 +1,7 @@
 package data;
 
 import com.google.gson.*;
-import helper.FileValidator;
+import helper.Validator;
 import interfaces.JsonDataSource;
 import model.Query;
 
@@ -15,7 +15,7 @@ public class JsonDataSourceImpl implements JsonDataSource {
 
     @Override
     public Query fetchJsonData(String path) {
-        if (!FileValidator.isValidJsonFile(path)) {
+        if (!Validator.isValidJsonFile(path)) {
             return null;
         }
         Query query;
