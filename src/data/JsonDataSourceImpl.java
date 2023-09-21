@@ -1,7 +1,7 @@
 package data;
 
 import com.google.gson.*;
-import helper.Validator;
+import helper.ValidatorUtil;
 import interfaces.JsonDataSource;
 import model.Query;
 
@@ -9,20 +9,21 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * Implementation of [JsonDataSource]  interface that fetches json from a file
+ */
 public class JsonDataSourceImpl implements JsonDataSource {
-
-    private Gson gson = new Gson();
 
     @Override
     public Query fetchJsonData(String path) {
-        if (!Validator.isValidJsonFile(path)) {
-            return null;
+        if (!ValidatorUtil.isValidJsonFile(path)) {
+            throw new RuntimeException("Exception: Not a json file");
         }
         Query query;
         try {
             FileReader reader = new FileReader(path);
             JsonElement jsonElement = JsonParser.parseReader(reader);
-            query = gson.fromJson(jsonElement, Query.class);
+            query = new Gson().fromJson(jsonElement, Query.class);
             reader.close();
             return query;
         } catch (FileNotFoundException exception) {

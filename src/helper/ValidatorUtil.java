@@ -1,6 +1,6 @@
 package helper;
 
-public class Validator {
+public class ValidatorUtil {
 
     public static boolean isValidJsonFile(String path) {
         return path.endsWith(Constants.JSON_EXTENSION);

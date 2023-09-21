@@ -1,5 +1,6 @@
 package helper;
 
+
 public class Constants {
 
     public final static String JSON_EXTENSION = ".json";
@@ -13,6 +14,11 @@ public class Constants {
     public static final String AND = " AND ";
 
     public static final String LIKE = " LIKE ";
+
+    public static final String ON = " ON ";
+    public static final String IN = " IN ";
+    public static final String OPEN_BRACKET = "( ";
+    public static final String CLOSED_BRACKET = " ) ";
 
 
 }

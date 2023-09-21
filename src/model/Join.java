@@ -17,9 +17,9 @@ public class Join {
     @SerializedName("field2")
     @Expose
     private String field2;
-    @SerializedName("joinTableName")
+    @SerializedName("joinTable")
     @Expose
-    private String joinTableName;
+    private String joinTable;
 
     public String getJoinType() {
         return joinType;
@@ -53,11 +53,11 @@ public class Join {
         this.field2 = field2;
     }
 
-    public String getJoinTableName() {
-        return joinTableName;
+    public String getJoinTable() {
+        return joinTable;
     }
 
-    public void setJoinTableName(String joinTableName) {
-        this.joinTableName = joinTableName;
+    public void setJoinTable(String joinTable) {
+        this.joinTable = joinTable;
     }
 }
