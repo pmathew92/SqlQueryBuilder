@@ -14,9 +14,6 @@ public class Query {
     @SerializedName("fields")
     @Expose
     private List<String> fields;
-    @SerializedName("conditions")
-    @Expose
-    private List<String> conditions;
     @SerializedName("tableName")
     @Expose
     private String tableName;
@@ -41,14 +38,6 @@ public class Query {
 
     public void setFields(List<String> fields) {
         this.fields = fields;
-    }
-
-    public List<String> getConditions() {
-        return conditions;
-    }
-
-    public void setConditions(List<String> conditions) {
-        this.conditions = conditions;
     }
 
     public String getTableName() {

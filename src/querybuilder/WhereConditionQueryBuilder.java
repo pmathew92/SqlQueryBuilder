@@ -70,9 +70,7 @@ public class WhereConditionQueryBuilder {
 
         for (int i = 0; i < column.getFieldValue().size(); ++i) {
             Object value = column.getFieldValue().get(i);
-            if (value instanceof Integer) {
-                builder.append(value);
-            } else if (value instanceof Double) {
+            if (value instanceof Integer  || value instanceof Double) {
                 builder.append(value);
             } else if (value instanceof String) {
                 builder.append("'").append(value).append("'");

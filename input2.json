@@ -5,7 +5,6 @@
     "name",
     "department"
   ],
-  "conditions": [],
   "tableName": "employee",
   "columns": [
     {
